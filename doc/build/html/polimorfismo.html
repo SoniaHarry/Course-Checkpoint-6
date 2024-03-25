@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Qué es el polimorfismo? &mdash; documentación de Course Checkpoint6 - </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e2bb6099"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="¿Qué es un método dunder?" href="dunder.html" />
+    <link rel="prev" title="¿Qué es Postman?" href="postman.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Course Checkpoint6
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="clases.html">¿Para qué usamos Clases en Python?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="init.html">¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">¿Cuáles son los tres verbos de API?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mongo.html">¿Es MongoDB una base de datos SQL o NoSQL?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whatapi.html">¿Qué es una API?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postman.html">¿Qué es Postman?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">¿Qué es el polimorfismo?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-la-herencia-de-clases">¿Que es la herencia de clases?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejemplo-polimorfismo">Ejemplo Polimorfismo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dunder.html">¿Qué es un método dunder?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorador.html">¿Qué es un decorador de python?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Course Checkpoint6</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">¿Qué es el polimorfismo?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/polimorfismo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="que-es-el-polimorfismo">
+<h1>¿Qué es el polimorfismo?<a class="headerlink" href="#que-es-el-polimorfismo" title="Link to this heading"></a></h1>
+<p>El término polimorfismo tiene origen en las palabras poly (muchos) y morfo (formas), y aplicado a la programación hace referencia a que los objetos pueden tomar diferentes formas.</p>
+<p>¿Pero qué significa esto?</p>
+<p>Pues bien, significa que objetos de diferentes clases pueden ser accedidos utilizando el mismo interfaz, mostrando un comportamiento distinto (tomando diferentes formas) según cómo sean accedidos.</p>
+<p>En pocas palabras, a Python le dan igual los tipos de los objetos, lo único que le importan son los métodos.</p>
+<p>¿Cómo se implementa el polimorfismo?</p>
+<p>Python permite la implementación de polimorfismo a través del uso de herencia y sobreescritura de métodos.
+El polimorfismo permite que un objeto se comporte de manera diferente en distintos contextos.</p>
+<p>En Python, el polimorfismo se implementa de manera natural gracias a la capacidad de las funciones y métodos para aceptar argumentos de diferentes tipos.</p>
+<section id="que-es-la-herencia-de-clases">
+<h2>¿Que es la herencia de clases?<a class="headerlink" href="#que-es-la-herencia-de-clases" title="Link to this heading"></a></h2>
+<p>Es un concepto importante en la programación orientada a objetos, el cual, permite crear una clase nueva basada en una clase ya existente, heredando sus atributos y métodos.
+A esta nueva clase la llamamos clase derivada o subclase, mientras que la clase existente recibirá el nombre de clase base o superclase.</p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>Para heredar una clase, simplemente se especifica el nombre de la clase padre dentro de los paréntesis después del nombre de la clase hija.</p>
+</div>
+<p>Ejemplo de Herencia:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Clase Automóvil</span>
+<span class="k">class</span> <span class="nc">Automovil</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocidad_maxima</span> <span class="o">=</span> <span class="n">velocidad_maxima</span>
+
+    <span class="k">def</span> <span class="nf">acelerar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gas</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Suministrando gas al motor:&quot;</span><span class="p">,</span> <span class="n">gas</span><span class="p">)</span>
+
+<span class="c1">#Declaramos clase</span>
+<span class="k">class</span> <span class="nc">AutomovilElectrico</span><span class="p">(</span><span class="n">Automovil</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">,</span> <span class="n">capacidad_bateria</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__capacidad_bateria</span> <span class="o">=</span> <span class="n">capacidad_bateria</span>
+
+    <span class="k">def</span> <span class="nf">bateria</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El automóvil eléctrico tiene una capacidad de bateria del &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__capacidad_bateria</span><span class="p">)</span>
+
+<span class="c1">#Creamos el objeto de la clase</span>
+<span class="n">MicocheElectrico</span><span class="o">=</span> <span class="n">AutomovilElectrico</span><span class="p">(</span><span class="s2">&quot;Peugeot&quot;</span><span class="p">,</span><span class="s2">&quot;3007&quot;</span><span class="p">,</span><span class="s2">&quot;Rojo&quot;</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="c1">#Llamamos al método heredado de la clase Automovil</span>
+<span class="n">MicocheElectrico</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span> <span class="c1">#Suministrando gas al motor: 150</span>
+<span class="c1">#Llamamos al método de la clase AutomovilElectrino</span>
+<span class="n">MicocheElectrico</span><span class="o">.</span><span class="n">bateria</span><span class="p">()</span> <span class="c1">#El automóvil eléctrico tiene una capacidad de bateria del  75</span>
+</pre></div>
+</div>
+</section>
+<section id="ejemplo-polimorfismo">
+<h2>Ejemplo Polimorfismo<a class="headerlink" href="#ejemplo-polimorfismo" title="Link to this heading"></a></h2>
+<p>Siguiendo con el polimorfismo vamos a poner un ejemplo:</p>
+<p>Para implementar el polimorfismo en la clase Automóvil, simplemente se deben definir diferentes métodos que compartan el mismo nombre pero que acepten distintos tipos de argumentos.
+Se podría definir un método llamado «<strong>acelerar</strong>» en la clase Automóvil, el cual acepte un argumento que represente la cantidad de gas que se quiere suministrar al motor.
+Luego, se podrían definir diferentes versiones de este método que acepten distintos tipos de argumentos.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Automovil</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__marca</span> <span class="o">=</span> <span class="n">marca</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__modelo</span> <span class="o">=</span> <span class="n">modelo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__velocidad_maxima</span> <span class="o">=</span> <span class="n">velocidad_maxima</span>
+
+    <span class="k">def</span> <span class="nf">acelerar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gas</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Suministrando gas al motor:&quot;</span><span class="p">,</span> <span class="n">gas</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">frenar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Frenando el automóvil&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">AutomovilElectrico</span><span class="p">(</span><span class="n">Automovil</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">,</span> <span class="n">capacidad_bateria</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__capacidad_bateria</span> <span class="o">=</span> <span class="n">capacidad_bateria</span>
+
+    <span class="k">def</span> <span class="nf">acelerar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nivel_carga</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nivel_carga</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El automóvil eléctrico acelera rápidamente&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El automóvil eléctrico acelera lentamente&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">AutomovilDeportivo</span><span class="p">(</span><span class="n">Automovil</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">,</span> <span class="n">aleron</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">marca</span><span class="p">,</span> <span class="n">modelo</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">velocidad_maxima</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__aleron</span> <span class="o">=</span> <span class="n">aleron</span>
+
+    <span class="k">def</span> <span class="nf">acelerar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pedal_a_fondo</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">pedal_a_fondo</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El automóvil deportivo acelera rápidamente&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El automóvil deportivo acelera lentamente&quot;</span><span class="p">)</span>
+
+<span class="n">Micoche</span><span class="o">=</span> <span class="n">Automovil</span><span class="p">(</span><span class="s2">&quot;Peugeot&quot;</span><span class="p">,</span><span class="s2">&quot;307&quot;</span><span class="p">,</span><span class="s2">&quot;Azul&quot;</span><span class="p">,</span><span class="mi">210</span><span class="p">)</span>
+<span class="n">Micoche</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#Suministrando gas al motor: 100</span>
+
+<span class="n">MicocheElectrico</span><span class="o">=</span> <span class="n">AutomovilElectrico</span><span class="p">(</span><span class="s2">&quot;Peugeot&quot;</span><span class="p">,</span><span class="s2">&quot;3007&quot;</span><span class="p">,</span><span class="s2">&quot;Rojo&quot;</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<span class="n">MicocheElectrico</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span> <span class="c1">#El automóvil eléctrico acelera rápidamente</span>
+
+<span class="n">MicocheDeportivo</span><span class="o">=</span> <span class="n">AutomovilDeportivo</span><span class="p">(</span><span class="s2">&quot;Peugeot&quot;</span><span class="p">,</span><span class="s2">&quot;3007&quot;</span><span class="p">,</span><span class="s2">&quot;Rojo&quot;</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MicocheDeportivo</span><span class="o">.</span><span class="n">acelerar</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#El automóvil deportivo acelera rápidamente</span>
+</pre></div>
+</div>
+<p>En este ejemplo, la clase Automóvil tiene un método llamado acelerar que acepta un argumento gas, que representa la cantidad de gas que se suministra al motor.
+La subclase AutomovilElectrico redefine el método acelerar para aceptar un argumento nivel_carga, que representa el nivel de carga de la batería del automóvil eléctrico.
+Si el nivel de carga es mayor o igual a 50, el automóvil acelera rápidamente; de lo contrario, acelera lentamente.
+La subclase AutomovilDeportivo también redefine el método acelerar, esta vez para aceptar un argumento opcional pedal_a_fondo.
+Si este argumento es True, el automóvil deportivo acelera rápidamente; de lo contrario, lo hace lentamente.</p>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blog.hubspot.es/website/clases-python#:~:text=Una%20clase%20en%20Python%20es,en%20un%20programa%20de%20computadora.">Python Polimorfismo</a></p></li>
+<li><p><a class="reference external" href="https://ellibrodepython.com/polimorfismo-en-programacion#polimorfismo-en-python">Python Polimorfismo El Libro</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="postman.html" class="btn btn-neutral float-left" title="¿Qué es Postman?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="dunder.html" class="btn btn-neutral float-right" title="¿Qué es un método dunder?" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Sonia D..</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

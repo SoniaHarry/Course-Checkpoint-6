@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Es MongoDB una base de datos SQL o NoSQL? &mdash; documentación de Course Checkpoint6 - </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e2bb6099"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="¿Qué es una API?" href="whatapi.html" />
+    <link rel="prev" title="¿Cuáles son los tres verbos de API?" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Course Checkpoint6
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="clases.html">¿Para qué usamos Clases en Python?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="init.html">¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">¿Cuáles son los tres verbos de API?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">¿Es MongoDB una base de datos SQL o NoSQL?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#que-son-las-bases-de-datos-nosql">¿Qué son las bases de datos NoSQL?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arquitectura-de-mongodb-y-sus-componentes">Arquitectura de MongoDB y sus componentes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="whatapi.html">¿Qué es una API?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postman.html">¿Qué es Postman?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polimorfismo.html">¿Qué es el polimorfismo?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dunder.html">¿Qué es un método dunder?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorador.html">¿Qué es un decorador de python?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Course Checkpoint6</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">¿Es MongoDB una base de datos SQL o NoSQL?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/mongo.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="es-mongodb-una-base-de-datos-sql-o-nosql">
+<h1>¿Es MongoDB una base de datos SQL o NoSQL?<a class="headerlink" href="#es-mongodb-una-base-de-datos-sql-o-nosql" title="Link to this heading"></a></h1>
+<p>MongoDB es un sistema de base de datos NoSQL (Not only SQL – No sólo SQL). Es deicr, MongoDB es una base de datos NoSQL orientada a documentos.
+Se utiliza para almacenar volúmenes masivos de datos.</p>
+<p>A diferencia de una base de datos relacional SQL tradicional, MongoDB no se basa en tablas y columnas.</p>
+<p>Los datos se almacenan como colecciones y documentos. Los documentos son pares value/key que sirven como unidad básica de datos.</p>
+<p>Las colecciones contienen conjuntos de documentos y funciones. Son el equivalente a las tablas en las bases de datos relacionales clásicas.</p>
+<section id="que-son-las-bases-de-datos-nosql">
+<h2>¿Qué son las bases de datos NoSQL?<a class="headerlink" href="#que-son-las-bases-de-datos-nosql" title="Link to this heading"></a></h2>
+<p>Son estructuras que nos permiten almacenar información en aquellas situaciones en las que las bases de datos relacionales generan ciertos problemas debido principalmente a problemas de escalabilidad y rendimiento de las bases de datos relacionales donde se dan cita miles de usuarios concurrentes y con millones de consultas diarias.</p>
+<p>Además, las bases de datos NoSQL son sistemas de almacenamiento de información que no cumplen con el esquema entidad–relación.
+Tampoco utilizan una estructura de datos en forma de tabla donde se van almacenando los datos sino que para el almacenamiento hacen uso de otros formatos como clave–valor, mapeo de columnas o grafos.</p>
+</section>
+<section id="arquitectura-de-mongodb-y-sus-componentes">
+<h2>Arquitectura de MongoDB y sus componentes<a class="headerlink" href="#arquitectura-de-mongodb-y-sus-componentes" title="Link to this heading"></a></h2>
+<p>La arquitectura de MongoDB se basa en varios componentes principales:</p>
+<ul class="simple">
+<li><p>En primer lugar, «<strong>_id</strong>» es un campo obligatorio para cada documento. Representa un valor único y puede considerarse como la clave principal del documento para identificarlo dentro de la colección.</p></li>
+<li><p>Un documento es el equivalente a un registro en una base de datos tradicional. Se compone de campos de nombre y valor. Cada campo es una asociación entre un nombre y un valor y es similar a una columna en una base de datos relacional.</p></li>
+<li><p>Una colección es un grupo de documentos de MongoDB, y se corresponde con una tabla creada con cualquier otro RDMS como Oracle o MS SQL en una base de datos relacional. No tiene una estructura predefinida.</p></li>
+</ul>
+<p>Una base de datos es un contenedor de colecciones, al igual que un RDMS es un contenedor de tablas para las bases de datos relacionales. Cada uno tiene su propio conjunto de archivos en el sistema de archivos. Un servidor MongoDB puede almacenar múltiples bases de datos.</p>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://datascientest.com/es/mongodb-todo-sobre-la-base-de-datos-nosql-orientada-a-documentos">Todo sobre MongoDB</a></p></li>
+<li><p><a class="reference external" href="https://oxygenacademy.es/mongo-db-vs-mysql-diferencias-ventajas-y-desventajas/">MongoDB vs MySQL</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="api.html" class="btn btn-neutral float-left" title="¿Cuáles son los tres verbos de API?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="whatapi.html" class="btn btn-neutral float-right" title="¿Qué es una API?" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Sonia D..</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

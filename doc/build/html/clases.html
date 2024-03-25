@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Para qué usamos Clases en Python? &mdash; documentación de Course Checkpoint6 - </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=e2bb6099"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=efdbd0b9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="¿Qué es un método dunder?" href="dunder.html" />
+    <link rel="prev" title="Bienvenido a la documentación del Checkpoint6!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Course Checkpoint6
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">¿Para qué usamos Clases en Python?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#declaracion-de-una-clase">Declaración de una clase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creacion-de-un-objeto">Creación de un objeto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acceso-a-metodos-y-atributos">Acceso a métodos y atributos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atributos-en-las-clases-python">Atributos en las clases python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#atributos-publicos">Atributos públicos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atributos-privados">Atributos privados</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atributos-protegidos">Atributos protegidos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#metodos-en-las-clases-python">Métodos  en las clases python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metodos-especiales-en-python">Métodos especiales en Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dunder.html">¿Qué es un método dunder?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ventajas-y-desventajas-del-uso-de-las-clases-en-python">Ventajas y desventajas del uso de las clases en Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ventajas">Ventajas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#desventajas">Desventajas</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="init.html">¿Qué método se ejecuta automáticamente cuando se crea una instancia de una clase?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">¿Cuáles son los tres verbos de API?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mongo.html">¿Es MongoDB una base de datos SQL o NoSQL?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whatapi.html">¿Qué es una API?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="postman.html">¿Qué es Postman?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polimorfismo.html">¿Qué es el polimorfismo?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dunder.html">¿Qué es un método dunder?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorador.html">¿Qué es un decorador de python?</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Course Checkpoint6</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">¿Para qué usamos Clases en Python?</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/clases.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="para-que-usamos-clases-en-python">
+<h1>¿Para qué usamos Clases en Python?<a class="headerlink" href="#para-que-usamos-clases-en-python" title="Link to this heading"></a></h1>
+<p>En Python una clase es una estructura de programación que sirve para definir atributos y métodos que describen a un objeto o entidad; en otras palabras, una clase es una plantilla o molde para crear objetos, donde se definen las propiedades (atributos) y comportamientos (métodos) que tendrán los objetos que se creen a partir de ella.</p>
+<section id="declaracion-de-una-clase">
+<h2>Declaración de una clase<a class="headerlink" href="#declaracion-de-una-clase" title="Link to this heading"></a></h2>
+<p>Se utiliza la palabra reservada «<strong>class</strong>»» seguida del nombre de la clase y dos puntos (:) y luego el cuerpo de la clase.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">atributo1</span><span class="o">=</span><span class="s2">&quot;valor1&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hi, my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> and I’m </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s1"> years old&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>En este caso:</p>
+<ul class="simple">
+<li><p>la clase definida se llama «<strong>Person</strong>»</p></li>
+<li><p>tiene un atributo de clase «<strong>atributo1</strong>»</p></li>
+<li><p>tiene dos atributos de instancia «<strong>name</strong>» y «<strong>age</strong>»</p></li>
+<li><p>tiene un método “greeting”</p></li>
+<li><p>y el método dunder «<strong>__init__</strong>»»</p></li>
+</ul>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>Se podría decir que toda clase tiene un constructor, que recibe unos parámetros de entrada cuando el objeto es creado.
+Creamos por lo tanto el constructor «<strong>__init__</strong>» que es un método dunder que se usa para inicializar un objeto cuando se crea una instancia de una clase.</p>
+</div>
+</section>
+<section id="creacion-de-un-objeto">
+<h2>Creación de un objeto<a class="headerlink" href="#creacion-de-un-objeto" title="Link to this heading"></a></h2>
+<p>Siguiendo con la clase creada anteriormente, podemos crear un objeto de esta clase de la siguiente manera:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_person</span><span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Sonia&quot;</span><span class="p">,</span><span class="mi">48</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="acceso-a-metodos-y-atributos">
+<h2>Acceso a métodos y atributos<a class="headerlink" href="#acceso-a-metodos-y-atributos" title="Link to this heading"></a></h2>
+<p>Siguiendo con la clase creada anteriormente, podemos acceder a los atributos y métodos de la clase de la siguiente manera:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_person</span><span class="o">.</span><span class="n">atributo1</span>
+<span class="n">my_person</span><span class="o">.</span><span class="n">name</span>
+<span class="n">my_person</span><span class="o">.</span><span class="n">age</span>
+<span class="n">my_person</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="atributos-en-las-clases-python">
+<h2>Atributos en las clases python<a class="headerlink" href="#atributos-en-las-clases-python" title="Link to this heading"></a></h2>
+<p>Un atributo es una variable que se define dentro de una clase, la cual almacena datos que pertenecen a un objeto de esa clase. Los atributos se utilizan para representar características o propiedades de un objeto, como su estado actual, su identificador, su tamaño, su color, etc.</p>
+<p>Los atributos pueden ser de diferentes tipos de datos, como enteros, flotantes, cadenas, listas, diccionarios, entre otros.</p>
+<p>Además, los atributos pueden tener distintos niveles de visibilidad, que se especifican mediante los modificadores de acceso en la definición de la clase.</p>
+<p>Los tres tipos principales de atributos son:</p>
+<section id="atributos-publicos">
+<h3>Atributos públicos<a class="headerlink" href="#atributos-publicos" title="Link to this heading"></a></h3>
+<p>Se puede acceder a ellos desde cualquier parte del programa, incluso desde fuera de la clase.
+En Python, los atributos se consideran públicos por defecto, lo que significa que no se requiere ningún modificador de acceso para especificar que un atributo es público.
+Para acceder a un atributo público, se utiliza la notación de punto (.) seguida del nombre del atributo.</p>
+</section>
+<section id="atributos-privados">
+<h3>Atributos privados<a class="headerlink" href="#atributos-privados" title="Link to this heading"></a></h3>
+<p>Sólo se puede acceder a ellos desde dentro de la clase en la que se definen.</p>
+<p>En Python, los atributos privados se definen mediante dos guiones bajos «<strong>__</strong>» seguido del nombre del atributo.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saldo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__saldo</span><span class="o">=</span><span class="n">saldo</span>
+</pre></div>
+</div>
+<p>En este caso:</p>
+<p>«<strong>__saldo</strong>» es un atributo privado de la clase «<strong>BankAccount</strong>», que solo se puede acceder a él desde dentro de la clase.</p>
+<p>Si intentamos acceder a este atributo desde fuera de la clase se producirá un error.</p>
+</section>
+<section id="atributos-protegidos">
+<h3>Atributos protegidos<a class="headerlink" href="#atributos-protegidos" title="Link to this heading"></a></h3>
+<p>Sólo se puede acceder a ellos desde dentro de la clase en la que se definen y desde las clases derivadas (heredadas) de esa clase.</p>
+<p>En Python, los atributos protegidos se definen mediante un guión bajo «<strong>_</strong>» seguido del nombre del atributo.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saldo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_saldo</span><span class="o">=</span><span class="n">saldo</span>
+</pre></div>
+</div>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>Sin embargo, en Python no existe un verdadero modificador de acceso protegido como en otros lenguajes de programación orientados a objetos, por lo que el uso del prefijo «<strong>_</strong>» es una convención para indicar que un atributo está protegido, pero aún es posible acceder a él desde fuera de la clase.</p>
+</div>
+</section>
+</section>
+<section id="metodos-en-las-clases-python">
+<h2>Métodos  en las clases python<a class="headerlink" href="#metodos-en-las-clases-python" title="Link to this heading"></a></h2>
+<p>En Python, los métodos son funciones que se definen dentro de una clase y se utilizan para realizar operaciones en los objetos creados a partir de esa clase.</p>
+<p>Los métodos se definen de la misma manera que las funciones, pero siempre tienen como primer parámetro el objeto al que se aplicará el método, que suele llamarse «<strong>self</strong>» por convención.</p>
+<p>Ejemplo de un método, función <strong>greeting</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">atributo1</span><span class="o">=</span><span class="s2">&quot;valor1&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Hi, my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> and I’m </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s1"> years old&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Para utilizar un método de una clase, primero debemos crear un objeto a partir de esa clase y luego llamar al método sobre ese objeto.</p>
+<p>Ejemplo de creación del objeto y llamada al método <strong>greeting</strong>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_person</span><span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Sonia&quot;</span><span class="p">,</span><span class="mi">48</span><span class="p">)</span>
+<span class="n">my_person</span><span class="o">.</span><span class="n">greeting</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>En Python, «<strong>self</strong>» es una convención que se utiliza como nombre para el primer parámetro de un método en una clase.
+El objetivo de «self» es hacer referencia al objeto que se está manipulando cuando se llama al método.</p>
+</div>
+<section id="metodos-especiales-en-python">
+<h3>Métodos especiales en Python<a class="headerlink" href="#metodos-especiales-en-python" title="Link to this heading"></a></h3>
+<p>Ver ¿Qué es un método dunder? de nuestra documentación.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dunder.html">¿Qué es un método dunder?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dunder.html#ejemplo-de-algunos-metodos-dunder">Ejemplo de algunos métodos dunder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dunder.html#init">__init__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dunder.html#str">__str__</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dunder.html#repr">__repr__</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dunder.html#resources">Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="ventajas-y-desventajas-del-uso-de-las-clases-en-python">
+<h2>Ventajas y desventajas del uso de las clases en Python<a class="headerlink" href="#ventajas-y-desventajas-del-uso-de-las-clases-en-python" title="Link to this heading"></a></h2>
+<section id="ventajas">
+<h3>Ventajas<a class="headerlink" href="#ventajas" title="Link to this heading"></a></h3>
+<p>Reutilización de código: las clases pueden reutilizarse en diferentes partes del programa o en distintos programas, lo que ahorra tiempo y reduce la duplicación de código.</p>
+<p>Encapsulación: permiten ocultar la complejidad de un objeto y exponer solo una interfaz simple y fácil de usar para interactuar con él.</p>
+<p>Modularidad: pueden descomponer un programa en componentes más pequeños y manejables, lo que facilita el mantenimiento y la solución de problemas.</p>
+<p>Polimorfismo: ayudan a implementar el mismo conjunto de métodos con diferentes comportamientos para distintos tipos de objetos, lo que permite una mayor flexibilidad y extensibilidad en el diseño de programas.</p>
+</section>
+<section id="desventajas">
+<h3>Desventajas<a class="headerlink" href="#desventajas" title="Link to this heading"></a></h3>
+<p>Sobrecarga de complejidad: las clases pueden agregar complejidad adicional a un programa y hacer que sea más difícil de entender y depurar.</p>
+<p>Curva de aprendizaje: el aprendizaje de las clases y la programación orientada a objetos en general pueden requerir una curva de aprendizaje más pronunciada para los programadores principiantes.</p>
+<p>Uso innecesario: a veces, las clases se utilizan innecesariamente en situaciones en las que una función simple podría haber hecho el trabajo de manera más eficiente.</p>
+</section>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>Python´s classes &lt;https://www.w3schools.com/python/python_classes.asp&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://blog.hubspot.es/website/clases-python#:~:text=Una%20clase%20en%20Python%20es,en%20un%20programa%20de%20computadora.">Python´s classes blog</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="index.html" class="btn btn-neutral float-left" title="Bienvenido a la documentación del Checkpoint6!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="dunder.html" class="btn btn-neutral float-right" title="¿Qué es un método dunder?" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Sonia D..</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
